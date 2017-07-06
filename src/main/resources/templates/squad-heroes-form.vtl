@@ -1,0 +1,29 @@
+<!--squad-heroes-form.vtl-->
+<h1>Add a hero to $squad.getSquadName()</h1>
+
+<form action="/heroes" method="post">
+  <input id="squadId" name="squadId" type="hidden" value="$squad.getId()">
+
+  <div class="form-group">
+    <label for="name">Hero Name</label>
+    <input id="name" name="name" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input id="age" name="age" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="sPower">Special Power</label>
+    <input id="sPower" name="sPower" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="weakness">Weakness</label>
+    <input id="weakness" name="weakness" type="text" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-success">Add Hero</button>
+</form>
+<!--squad-heroes-form.vtl-->
