@@ -1,8 +1,8 @@
 <!--squad-heroes-form.vtl-->
-<h1>Add a hero to $squad.getSquadName()</h1>
+<h1>Add a hero to $squad.getsquadName()</h1>
 
 <form action="/heroes" method="post">
-  <input id="squadId" name="squadId" type="hidden" value="$squad.getId()">
+  <input id="squadId" name="squadId" type="hidden" value="$squad.getsquadId()">
 
   <div class="form-group">
     <label for="name">Hero Name</label>

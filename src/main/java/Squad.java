@@ -6,7 +6,7 @@ public class Squad {
   private int mSquadSize;
   private String mCause;
   private static List<Squad> instances = new ArrayList<Squad>();
-  private int mId;
+  private int msquadId;
   private List<Hero> mHeroes;
 
   public Squad(String squadName, int squadSize, String cause) {
@@ -14,7 +14,7 @@ public class Squad {
       mSquadSize = squadSize;
       mCause = cause;
       instances.add(this);
-      mId = instances.size();
+      msquadId = instances.size();
       mHeroes = new ArrayList<Hero>();
   }
 
@@ -38,13 +38,13 @@ public class Squad {
     instances.clear();
   }
 
-  public int getId() {
-    return mId;
+  public int getsquadId() {
+    return msquadId;
   }
 
-  public static Squad find(int id) {
+  public static Squad find(int squadid) {
     try {
-      return instances.get(id - 1);
+      return instances.get(squadid - 1);
     } catch (IndexOutOfBoundsException exception) {
       return null;
     }

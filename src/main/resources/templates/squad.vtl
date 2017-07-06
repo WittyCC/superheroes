@@ -1,18 +1,18 @@
 <!--squad.vtl-->
-#if ($squad)
-  <h1>$squad.getSquadName() heroes:</h1>
-  <ul>
-    #foreach($hero in $squad.getHeroes())
-     <li>$hero.getName()</li>
-     <p>$hero.getAge()</p>
-     <p>$hero.getSPower()</p>
-     <p>$hero.getWeakness()</p>
-    #end
-  </ul>
+<h1>$squad.getsquadName() heroes:</h1>
+#if ($squad.getHeroes().size() > 0)
+<ul>
+  #foreach($hero in $squad.getHeroes())
+   <li>$hero.getName()</li>
+   <p>$hero.getAge()</p>
+   <p>$hero.getSPower()</p>
+   <p>$hero.getWeakness()</p>
+  #end
+</ul>
 #else
   <em><p>Oops! We can't seem to find that squad.</p></em>
 #end
 
-<a href="/squads/$squad.getId()/heroes/new">Add a new hero</a>
+<a href="/squads/$squad.getsquadId()/heroes/new">Add a new hero</a><br>
 <a href="/squads">All squads</a>
 <!--squad.vtl-->
